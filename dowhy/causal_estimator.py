@@ -10,7 +10,7 @@ class CausalEstimator:
     """
 
     def __init__(self, data, identified_estimand, treatment, outcome,
-                 test_significance, params=None):
+                 test_significance=None, params=None):
         """Initializes an estimator with data and names of relevant variables.
 
         More description.
