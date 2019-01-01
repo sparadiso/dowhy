@@ -65,9 +65,8 @@ class TestLinearRegressionEstimator(object):
         )
 
         est_ate = estimator_ate.estimate_effect()
-        error = est_ate.value - true_ate
+        error = np.abs(est_ate.value - true_ate)
         print("Error in ATE estimate = {0} with tolerance {1}%. Estimated={2},True={3}".format(
             error, error_tolerance * 100, est_ate.value, true_ate)
         )
-        res = True if (error < true_ate * error_tolerance) else False
-        assert res
+        assert error < true_ate * error_tolerance
