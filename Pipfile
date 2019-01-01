@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+
+[packages]
+numpy = "*"
+scipy = "*"
+matplotlib = "*"
+pandas = "*"
+networkx = "*"
+sympy = "*"
+scikit-learn = "*"
+pydot = "*"
+jupyter = "*"
+
+[requires]
+python_version = "3.5"
